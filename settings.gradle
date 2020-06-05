@@ -1,0 +1,2 @@
+include ':app', ':skin_library', ':skin_packages'
+rootProject.name='NeDynamicSkinPeeler'

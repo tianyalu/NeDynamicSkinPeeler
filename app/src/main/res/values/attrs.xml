@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义控件属性 -->
+    <declare-styleable name="CustomCircleView">
+        <attr name="circleColor" format="color"/>
+        <attr name="circleTextColor" format="color"/>
+        <attr name="circleText" format="string"/>
+        <attr name="circleTextSize" format="integer"/>
+        <!-- 字体属性 -->
+        <attr name="custom_typeface"/>
+    </declare-styleable>
+</resources>
