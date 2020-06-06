@@ -4,7 +4,7 @@
 
 ## 一、实现效果图
 
-![image](https://github.com/tianyalu/NeDynamicSkinPeeler/raw/show/show.gif)
+![image](https://github.com/tianyalu/NeDynamicSkinPeeler/raw/master/show/show.gif)
 
 ## 二、皮肤包
 
@@ -209,7 +209,13 @@
   }
   ```
 
+#### 3.2.4 构建皮肤包
 
+`skin_packages` `Module`是一个`Application`，构建该应用，生成apk文件，可以修改名称。
+
+#### 3.2.5 获取皮肤包
+
+将3.2.4生成的皮肤包上传到服务器，使用时从服务器下载，或者直接拷贝到手机存储中供应用加载。
 
 ## 四、原理分析
 
