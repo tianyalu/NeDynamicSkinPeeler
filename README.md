@@ -100,10 +100,12 @@
   }
   ```
 
-* 根据皮肤包包名以及`Resources`真正获取皮肤包的资源  
+* 根据皮肤包包名以及`Resources`真正获取皮肤包的资源   
+
+  
 
   ```java
-/**
+  /**
   * 参考：resources.arsc资源映射表
   * 通过id值获取资源 Name 和 Type
   * @param resourceId 资源ID值
@@ -211,7 +213,7 @@
 
 #### 3.2.4 构建皮肤包
 
-`skin_packages` `Module`是一个`Application`，构建该应用，生成apk文件，可以修改名称。
+`skin_packages` `Module`是一个`Application`，构建该应用，生成apk文件，可以修改名称后缀名为`.skin`。
 
 #### 3.2.5 获取皮肤包
 
