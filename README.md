@@ -100,12 +100,12 @@
   }
   ```
 
-* 根据皮肤包包名以及`Resources`真正获取皮肤包的资源
+* 根据皮肤包包名以及`Resources`真正获取皮肤包的资源  
 
   ```java
-  /**
+/**
   * 参考：resources.arsc资源映射表
-* 通过id值获取资源 Name 和 Type
+  * 通过id值获取资源 Name 和 Type
   * @param resourceId 资源ID值
   * @return 如果没有皮肤包则加载app内置资源ID，否则的话加载皮肤包指定资源ID
   */
