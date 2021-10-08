@@ -103,7 +103,7 @@ public class SkinManager {
 
             //无法获取皮肤包应用的包名，则加载APP内置资源
             isDefaultSkin = TextUtils.isEmpty(skinPackageName);
-            if(!isDefaultSkin) {
+            if(!isDefaultSkin) { // 如果获取不到包名，证明是非法的皮肤包
                 cacheSkin.put(skinPath, new SkinCache(skinResources, skinPackageName));
             }
 

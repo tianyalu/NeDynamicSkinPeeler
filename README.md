@@ -28,11 +28,13 @@
 
 ## 三、实现思路浅析
 
+收集需要换肤的`View` -->  加载外界皮肤包资源 --> 换肤
+
 ### 3.1 总体思路
 
 动态换肤与 [静态换肤](https://github.com/tianyalu/NeStaticSkinPeeler/blob/master/README.md) 总体思路大体相同，也是重写`onCreateView()`方法，在此方法中将布局文件中的系统控件替换为自定义控件，在自定义控件中实现换肤接口，在需要换肤的时候递归遍历`decorView`中实现了换肤接口的控件，调用其换肤方法实现换肤。
 
-**根本区别**在于：动态换肤在执行换肤的时候，使用的是皮肤包（也即另一个`apk`）中的资源文件，而不是本项目中的另一套资源文件。所以本文的核心在于**如何通过反射拿到皮肤包的`AssetManager`，进而拿到`Resources`，然后根据拿到的皮肤包包名以及`Resources`真正获取皮肤包的资源**。
+**根本区别**在于：动态换肤在执行换肤的时候，使用的是皮肤包（也即另一个`apk`）中的资源文件，而不是本项目中的另一套资源文件（注意：本项目中的`AssetManager`对象只能操作本应用的资源`Resources`文件）。所以本文的核心在于**如何通过反射拿到皮肤包的`AssetManager`，进而拿到`Resources`，然后根据拿到的皮肤包包名以及`Resources`真正获取皮肤包的资源**。
 
 ### 3.2 具体实现步骤
 
@@ -41,7 +43,7 @@
 
 核心点在于以下两点：
 
-* 通过反射拿到皮肤包的`AssetManager`，进而拿到`Resources`和皮肤包包名
+* 通过反射拿到皮肤包的`AssetManager`，进而拿到`Resources`和皮肤包包名，可以查看 [Android在线源码](https://www.androidos.net.cn/sourcecode)
 
   ```java
   /**
